@@ -1,16 +1,8 @@
 # flutter_movie_tmdb
 
-A new Flutter application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The Movie Database 에서 API를 받아와 만든 프로젝트이다.
+인기영화 리스트를 불러와 화면에 출력한다.
+출력된 리스트를 클릭하면 상세보기 페이지로 들어간다.
+GetxController를 사용하여 view단과 분리 하였다.
+스크롤을 다 내리면 새로운 정보를 불러오는 인피니티 스크롤을 사용하였다.
+getWidget 패키지의 GFRating 위젯을 사용하여 별모양의 평점을 만들었다.
