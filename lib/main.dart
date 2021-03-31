@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_movie_tmdb/screens/movie_list/movie_list_screen.dart';
 import 'package:get/get.dart';
 
+import 'app.dart';
 import 'constants.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kScaffoldColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MovieListScreen(),
+      home: App(),
     );
   }
 }

@@ -3,6 +3,7 @@ import 'package:flutter_movie_tmdb/constants.dart';
 import 'package:flutter_movie_tmdb/models/movie.dart';
 import 'package:get/get.dart';
 
+import '../../login_check.dart';
 import 'components/body.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -15,12 +16,18 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(movie: movie),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Get.to(() => LoginCheck(movie: movie)),
+        backgroundColor: kButtonColor,
+        child: Icon(Icons.rate_review, color: Colors.white),
+      ),
     );
   }
 
   AppBar buildAppBar() {
     return AppBar(
-      title: Text(movie.title, style: TextStyle(fontSize: 16),),
+      title: Text(movie.title, style: TextStyle(fontSize: 16)),
+      // toolbarHeight: Get.size.height * 0.08,
       backgroundColor: kPrimaryColor,
       centerTitle: true,
       elevation: 0.0,

@@ -56,7 +56,7 @@ class _BodyState extends State<Body> {
 
 Widget buildMovieListItem(Movie movie) {
   return GestureDetector(
-    onTap: () => Get.to(DetailScreen(movie: movie)),
+    onTap: () => Get.to(() => DetailScreen(movie: movie)),
     child: Container(
       height: 170,
       margin: const EdgeInsets.only(bottom: 10),

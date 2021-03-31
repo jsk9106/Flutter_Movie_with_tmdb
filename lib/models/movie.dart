@@ -22,7 +22,7 @@ class Movie {
         overview = json['overview'],
         posterPath = 'https://image.tmdb.org/t/p/w500' + json['poster_path'],
         backdropPath = 'https://image.tmdb.org/t/p/w500' + json['backdrop_path'],
-        voteAverage = json['vote_average'],
+        voteAverage = (json['vote_average'] / 10) * 5,
         genre = json['genre_ids'],
         releaseDate = json['release_date'];
 }
