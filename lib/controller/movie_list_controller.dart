@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_movie_tmdb/models/movie.dart';
+import 'package:flutter_movie_tmdb/privacy.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
@@ -27,12 +28,13 @@ class MovieListController extends GetxController{
     scrollController.dispose();
   }
 
+  // 영화 정보 불러오기
   Future<void> fetchData() async{
-    if(page > 50){
+    if(page > 50){ // 총 페이지 수를 넘긴다면 그냥 리턴
       return;
     }
 
-    String url = 'https://api.themoviedb.org/3/movie/popular?api_key=2665d2776a3a52a505d0ea4584a81f23&language=ko&page=$page';
+    String url = 'https://api.themoviedb.org/3/movie/popular?api_key=$key&language=ko&page=$page';
     try{
       http.Response response = await http.get(url);
 
